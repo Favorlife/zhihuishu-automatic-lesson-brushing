@@ -92,7 +92,7 @@ class AutoLessons():
         while True:
             try:
                 # 定位到播放按钮
-                time.sleep(1)
+                time.sleep(2)
                 play_window = self.driver.find_element(By.XPATH, '//*[@id="vjs_container"]/div[8]')
                 ActionChains(self.driver).move_to_element(play_window).perform()  # 防止进度条消失
                 play_button = self.driver.find_element(By.XPATH, '//*[@id="playButton"]')
@@ -119,6 +119,7 @@ class AutoLessons():
                 return
             except Exception as e:
                 self.driver.refresh()
+                time.sleep(1)
                 print('play error, refresh successful')
 
     def play_not_finished(self, all_units):
@@ -171,6 +172,7 @@ class AutoLessons():
                                 break
                             except:
                                 self.driver.refresh()
+                                time.sleep(2)
 
                 elif res == True:
                     print(f'end{index}')
