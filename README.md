@@ -11,7 +11,7 @@
 
 下载release的版本使用即可，
 
-![image](https://user-images.githubusercontent.com/93006603/195993969-514ded76-5e89-46d2-8cca-5dd39f718db6.png)
+![image](20221015.png)
 
 
 使用注意事项：
