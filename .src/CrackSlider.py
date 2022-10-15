@@ -59,9 +59,9 @@ class CrackSlider():
         mid = distance * 3 / 5  #减速阀值
         while current < distance:
             if current < mid:
-                a = 2  #加速度为+2
+                a = 20  #加速度为+20  （原加速度 2）
             else:
-                a = -3  #加速度-3
+                a = -21  #加速度-21  (原加速度-3）
             s  = v * t + 0.5 * a * (t ** 2)
             v = v + a * t
             current += s
@@ -118,7 +118,7 @@ class CrackSlider():
 
         ActionChains(self.driver).release().perform()
 
-    def login(self,user,passwd):
+    def ZHSlogin(self,user,passwd):
         self.open(user,passwd)
         target = 'target.jpg'
         template = 'template.png'
@@ -127,18 +127,18 @@ class CrackSlider():
         tracks = self.get_tracks((distance + 7) * self.zoom)  # 对位移的缩放计算
         self.crack_slider(tracks)
 
-    def get_driver(self):
-        return self.driver
+    # def get_driver(self):
+    #     return self.driver
 
 
-if __name__ == '__main__':
-    url = 'https://passport.zhihuishu.com/login'
-    cs = CrackSlider(url=url)
-    # cs.open()
-    # target = 'target.jpg'
-    # template = 'template.png'
-    # cs.get_pic()
-    # distance = cs.match(target, template)
-    # tracks = cs.get_tracks((distance + 7) * cs.zoom)  # 对位移的缩放计算
-    # cs.crack_slider(tracks)
-    cs.login()
+# if __name__ == '__main__':
+#     url = 'https://passport.zhihuishu.com/login'
+#     cs = CrackSlider(url=url)
+#     # cs.open()
+#     # target = 'target.jpg'
+#     # template = 'template.png'
+#     # cs.get_pic()
+#     # distance = cs.match(target, template)
+#     # tracks = cs.get_tracks((distance + 7) * cs.zoom)  # 对位移的缩放计算
+#     # cs.crack_slider(tracks)
+#     cs.login()
