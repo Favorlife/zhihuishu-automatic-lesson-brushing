@@ -57,23 +57,46 @@ class AutoLessons():
         my_classes.click()
         time.sleep(3)
         # 关闭‘切换身份提醒’,一般要点两次
+        try:
+            close_tip = wait.until(EC.element_to_be_clickable(self.driver.find_element(By.XPATH, '//*[@id="student-page"]/div[4]/div/div/div[2]/div[2]')))
+            '''
+            '//*[@id="student-page"]/div[5]/div/div/div[2]/div[2]'   这是路人账号关闭提示路径
+            '//*[@id="student-page"]/div[4]/div/div/div[2]/div[2]'   这是学生账号关闭提示路径
+            '''
+            close_tip.click()
+            close_tip.click()
+
+        except Exception as e:
+            pass
+
+        # while True:
+        #     try:
+        #         close_tip = wait.until(EC.element_to_be_clickable(self.driver.find_element(By.XPATH, '//*[@id="student-page"]/div[4]/div/div/div[2]/div[2]')))
+        #         '''
+        #         '//*[@id="student-page"]/div[5]/div/div/div[2]/div[2]'   这是路人账号关闭提示路径
+        #         '//*[@id="student-page"]/div[4]/div/div/div[2]/div[2]'   这是学生账号关闭提示路径
+        #         '''
+        #         close_tip.click()
+        #         close_tip.click()
+        #         break
+        #     except Exception as e:
+        #         self.driver.refresh()
+        #         time.sleep(2)
+        # 定位到课程
+
+        f_url = self.driver.current_url
         while True:
             try:
-                close_tip = wait.until(EC.element_to_be_clickable(self.driver.find_element(By.XPATH, '//*[@id="student-page"]/div[4]/div/div/div[2]/div[2]')))
-                '''
-                '//*[@id="student-page"]/div[5]/div/div/div[2]/div[2]'   这是路人账号关闭提示路径
-                '//*[@id="student-page"]/div[4]/div/div/div[2]/div[2]'   这是学生账号关闭提示路径
-                '''
-                close_tip.click()
-                close_tip.click()
-                break
+                time.sleep(0.5)
+                classelem = self.driver.find_element(By.XPATH, f'//*[@id="sharingClassed"]//*[contains(text(), "{class_name}")]')
+                classelem.click()
+                time.sleep(0.5)
+                if self.driver.current_url == f_url:
+                    continue
+                else:
+                    break
             except Exception as e:
                 self.driver.refresh()
-                time.sleep(2)
-        # 定位到课程
-        classelem = self.driver.find_element(By.XPATH, f'//*[@id="sharingClassed"]//*[contains(text(), "{class_name}")]')
-        time.sleep(0.5)
-        classelem.click()
 
         time.sleep(4)
         # 关闭诚信学习警告-我知道了  和 学前必读
@@ -260,13 +283,23 @@ class AutoLessons():
 
     #定位到未看完课程小节号
     def find_not_finished(self, Class_list):
-        for i in Class_list:
+        while Class_list != None:
             if Class_list[0]['finish'] == True:
                 print(f"{Class_list[0]['unit']}小节已看完")
                 Class_list.pop(0)
             else:
                 print(f"已定位到没有看完小节，{Class_list[0]['unit']}")
                 return Class_list[0]['unit']   #返回未观看课程的unit  如第一节课unit = 0.1
+
+
+
+        # for item in Class_list:
+        #     if item['finish'] == True:
+        #         print(f"{item['unit']}小节已看完")
+        #         Class_list.pop(0)
+        #     else:
+        #         print(f"已定位到没有看完小节，{item['unit']}")
+        #         return item['unit']   #返回未观看课程的unit  如第一节课unit = 0.1
         return None
 
     def auto(self, user, passwd, class_num):
