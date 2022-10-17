@@ -1,0 +1,75 @@
+absl-py==0.15.0
+altgraph==0.17.3
+astunparse==1.6.3
+async-generator==1.10
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1659291887007/work
+brotlipy @ file:///D:/bld/brotlipy_1648854320485/work
+cachetools==5.1.0
+certifi==2022.5.18.1
+cffi @ file:///D:/bld/cffi_1656782950753/work
+charset-normalizer==2.0.12
+colorama==0.4.5
+cryptography @ file:///C:/ci/cryptography_1652101772384/work
+defusedxml==0.7.1
+exceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1661724178959/work
+flatbuffers==1.12
+future==0.18.2
+gast==0.3.3
+google-auth==2.6.6
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+graphviz==0.8.4
+grpcio==1.32.0
+h11 @ file:///home/conda/feedstock_root/build_artifacts/h11_1664132893548/work
+h5py==2.10.0
+idna==3.3
+importlib-metadata==4.11.4
+Keras-Preprocessing==1.1.2
+Markdown==3.3.7
+mxnet==1.2.0
+networkx==2.8.2
+numpy==1.19.5
+oauthlib==3.2.0
+onnx==1.11.0
+opencv-contrib-python==4.6.0.66
+opt-einsum==3.3.0
+outcome @ file:///home/conda/feedstock_root/build_artifacts/outcome_1655217710638/work
+pefile==2022.5.30
+Pillow==9.2.0
+protobuf==3.20.1
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
+pyinstaller==5.5
+pyinstaller-hooks-contrib==2022.10
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1663846997386/work
+PySide2==5.15.1
+PySocks @ file:///D:/bld/pysocks_1661604991356/work
+python-dotenv==0.21.0
+pywin32-ctypes==0.2.0
+PyYAML==6.0
+redis @ file:///Users/ktietz/demo/mc3/conda-bld/redis_1629466498261/work
+requests==2.27.1
+requests-oauthlib==1.3.1
+rsa==4.8
+selenium @ file:///home/conda/feedstock_root/build_artifacts/selenium_1664458076844/work/src/py
+shiboken2==5.15.1
+six==1.15.0
+sniffio @ file:///home/conda/feedstock_root/build_artifacts/sniffio_1662051266223/work
+sortedcontainers @ file:///home/conda/feedstock_root/build_artifacts/sortedcontainers_1621217038088/work
+tensorboard==2.9.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.4.4
+tensorflow-estimator==2.4.0
+termcolor==1.1.0
+tqdm==4.64.1
+trio @ file:///D:/bld/trio_1664375284563/work
+trio-websocket @ file:///home/conda/feedstock_root/build_artifacts/trio-websocket_1641849081899/work/dist
+typing-extensions==3.7.4.3
+urllib3==1.26.9
+webdriver-manager==3.8.3
+win-inet-pton @ file:///D:/bld/win_inet_pton_1648771891747/work
+wrapt==1.12.1
+wsproto @ file:///home/conda/feedstock_root/build_artifacts/wsproto_1661356345548/work
+zipp==3.8.0
