@@ -60,7 +60,7 @@ sortedcontainers @ file:///home/conda/feedstock_root/build_artifacts/sortedconta
 tensorboard==2.9.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow==2.4.4
+tensorflow==2.7.2
 tensorflow-estimator==2.4.0
 termcolor==1.1.0
 tqdm==4.64.1
