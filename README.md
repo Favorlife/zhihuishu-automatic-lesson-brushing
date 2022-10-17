@@ -2,7 +2,7 @@
 2022最新自动跳人机交互检测的新版刷课工具
 
 ## :warning:注意 ：一定要使用**chrome浏览器**，其他浏览器暂不支持!!!
-
+chrome官网地址: https://www.google.cn/chrome/index.html
 
 ## 实现功能(v1.0.0)
 - [x] 基于ai跳过人机验证，无须手动登录
